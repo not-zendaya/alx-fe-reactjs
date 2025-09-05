@@ -12,7 +12,7 @@ import UserContext from './components/UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
-  const userData ={ name: "Jane Doe", email: "janedoe@example.com"};
+  const userData = { name: "Jane Doe", email: "janedoe@example.com"};
 
   return (
     <>
@@ -40,17 +40,12 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      <UserProfile
-      name="Alice"
-      age="25"
-      bio="Loves hiking and photography"
-      />
-      <UserContext.Provider value = {userData}>
+      <UserContext.Provider value ={userData}>
         <ProfilePage />
       </UserContext.Provider>
 
     </>
-  )
+  );
 }
 
 export default App;
