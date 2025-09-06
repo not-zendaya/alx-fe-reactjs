@@ -6,7 +6,9 @@ function Navbar() {
       style={{
         backgroundColor: "navy",
         padding: "10px",
-        textAlign: "center"
+        textAlign: "center",
+        display: "block",
+        justifyContent: "center"
       }}
     >
       <Link to="/" style={{ margin: "0 15px", color: "white" }}>
