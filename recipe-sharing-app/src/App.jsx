@@ -1,5 +1,5 @@
-
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
@@ -17,6 +17,7 @@ const NotFound = () => <div><h2>404 — Not found</h2></div>;
 
 export default function App() {
   return (
+    <Router>
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,5 +26,6 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
+    </Router>
   );
 }
