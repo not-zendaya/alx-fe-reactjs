@@ -27,7 +27,7 @@ const EditRecipeForm = () => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    event.preventDefault();
     updateRecipe({ id: recipe.id, title: title.trim(), description: description.trim() });
     navigate(`/recipes/${recipe.id}`);
   };
