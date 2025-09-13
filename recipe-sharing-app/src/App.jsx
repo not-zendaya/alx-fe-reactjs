@@ -5,6 +5,8 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 const Home = () => (
   <div>
@@ -24,6 +26,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
         <Route path="/recipes/:id/edit" element={<EditRecipeForm />} />
+        <Route path="/favorites" element={<FavoritesList />} />
+        <Route path="/recommendations" element={<RecommendationsList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
