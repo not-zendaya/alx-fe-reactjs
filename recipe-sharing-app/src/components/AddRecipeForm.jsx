@@ -1,21 +1,25 @@
-import { useState } from 'react';
-import { useRecipeStore } from './recipeStore';
+import React, { useState } from 'react';
+import  useRecipeStore  from './recipeStore';
+import { useNavigate } from 'react-router-dom';
+
 const AddRecipeForm = () => {
-  const addRecipe = useRecipeStore((state) => state.addRecipe);
+  const addRecipe = useRecipeStore((s) => s.addRecipe);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title.trim() || !description.trim()) return;
-
-    addRecipe({ id: Date.now(), title, description });
+    const newRecipe = { id: Date.now(), title: title.trim(), description: description.trim() };
+    addRecipe(newRecipe);
     setTitle('');
     setDescription('');
+    navigate(`/recipes/${newRecipe.id}`); // optional: go to details after adding
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginTop: '2rem' }}>
+    <form onSubmit={handleSubmit} style={{ marginTop: '1rem' }}>
       <input
         type="text"
         placeholder="Recipe Title"
