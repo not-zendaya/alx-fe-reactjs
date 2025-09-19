@@ -4,11 +4,11 @@ function Navbar() {
   return (
     <nav
       style={{
-        backgroundColor: "navy",
-        padding: "10px",
+        backgroundColor: "lightblue",
+        padding: "30px",
         textAlign: "center",
         display: "block",
-        justifyContent: "center"
+        justifyContent: "space-between"
       }}
     >
       <Link to="/" style={{ margin: "0 15px", color: "white" }}>
