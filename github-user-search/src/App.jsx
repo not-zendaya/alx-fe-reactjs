@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Search from "./components/search";
+import {searchUser} from "./components/Search";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
       <h1>GitHub User Search</h1>
-      <Search />
+      <searchUser />
       <form onSubmit={handleSearch}>
         <input
           type="text"
