@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fetchUserData } from "../services/githubService";
 
-const searchUser = () => {
+const Search = () => {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -56,4 +56,4 @@ const searchUser = () => {
   );
 };
 
-export default searchUser;
+export default Search;
