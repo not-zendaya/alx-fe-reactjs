@@ -16,7 +16,7 @@ export default function App() {
       const results = await searchUsers(query.trim());
       setUsers(results);
     } catch (err) {
-      setError("Something went wrong");
+      setError(" Looks like we cant find the user");
     } finally {
       setLoading(false);
     }
