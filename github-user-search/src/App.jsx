@@ -1,5 +1,4 @@
 import React from "react";
-import searchUser from "./components/Search";
 
 function App() {
   return (
