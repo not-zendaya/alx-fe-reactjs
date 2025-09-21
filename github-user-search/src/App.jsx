@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {searchUser} from "./components/Search";
 
 export default function App() {
   const [query, setQuery] = useState("");
