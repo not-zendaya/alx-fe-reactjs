@@ -29,13 +29,13 @@ const Search = () => {
       }
 
       if (users.length === 0) {
-        setError("Looks like we can't find any matching users.");
+        setError("Looks like we cant find any matching users.");
       } else {
         setResults(users);
       }
     } catch (err) {
       console.error(err.response || err.message);
-      setError("Looks like we can't find the user or search failed.");
+      setError("Looks like we cant find the user or search failed.");
     } finally {
       setLoading(false);
     }
