@@ -5,7 +5,7 @@ const Search = () => {
   const [username, setUsername] = useState("");
   const [userData, setUserData] = useState(null);
   const [location, setLocation] = useState("");
-  const [repos, setRepos] = useState("");
+  const [repos, setminRepos] = useState("");
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -49,7 +49,7 @@ const Search = () => {
           type="number"
           placeholder="Minimum repositories"
           value={repos}
-          onChange={(e) => setRepos(e.target.value)}
+          onChange={(e) => setminRepos(e.target.value)}
           className="w-full p-2 border rounded"
         />
 
