@@ -1,6 +1,6 @@
-// src/App.jsx
 import { useState } from "react";
 import { searchUsers } from "./services/githubSearch";
+import SearchBar from "./components/searchBar";
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
       <h1>GitHub User Search</h1>
-
+      <SearchBar />
       <form onSubmit={handleSearch}>
         <input
           type="text"
