@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import HomePage from './components/HomePage';
  function App()
  {
   return (
-      <h1>Recipe Sharing Platform</h1>
+   <>
+   <HomePage />
+   </>
   )
 }
 
