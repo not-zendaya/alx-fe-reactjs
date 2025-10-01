@@ -25,7 +25,9 @@ function HomePage(){
                 />
                 <h2 className="text-xl font-semibold text-gray-800">{r.title}</h2>
                 <p  className="text-gray-600 text-sm text-center mt-2">{r.summary}</p>
-                <button className="mt-4 px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-700 transition">View Recipe</button>
+                <Link to={`/recipe/${r.id}`} className="mt-4 px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-emerald-700 transition"> 
+                View Recipe
+                </Link>
                 </div>
             ))}    
         </div>
