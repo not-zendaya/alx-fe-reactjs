@@ -3,18 +3,62 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 eggs",
+      "50g grated parmesan",
+      "Black pepper to taste"
+    ],
+    "instructions": [
+      "Cook spaghetti until al dente.",
+      "Fry pancetta until crisp.",
+      "Whisk eggs with parmesan.",
+      "Combine pasta, pancetta, and egg mixture.",
+      "Serve hot with extra pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    "image": "https://images.unsplash.com/photo-1631452180539-96aca7d48617?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+     "ingredients": [
+      "500g chicken breast, cut into cubes",
+      "1 cup plain yogurt",
+      "2 tbsp tikka masala spice mix",
+      "2 tbsp butter",
+      "1 onion, finely chopped",
+      "2 cloves garlic, minced",
+      "1 cup tomato puree",
+      "1/2 cup cream",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and tikka masala spice for at least 30 minutes.",
+      "Grill or pan-fry chicken until golden.",
+      "In a pan, sauté onion and garlic in butter.",
+      "Add tomato puree and simmer.",
+      "Stir in cream and cooked chicken.",
+      "Simmer for 10 minutes, season, and serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Fruit Salad",
     "summary": "Slices  of fruit all mixed up in one bowl , served with a side of yoghurt, waffles and honey",
-    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+    "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZvb2R8ZW58MHx8MHx8fDA%3D",
+    "ingredients":["1 cup strawberries (sliced)","1 cup pineapple chunks","1 banana (sliced)","1 apple (chopped)","1 kiwi (peeled & sliced)","½ cup seedless grape"," ½ cup blueberries","½ cup natural yogurt","2 mini waffles","2 tablespoons honey"],
+    "instructions": [
+      "Wash and prepare all fruits (slice, chop, or cube them).",
+      "In a large mixing bowl, combine strawberries, pineapple, banana, apple, kiwi, grapes, and blueberries.",
+      "Gently toss fruits to mix evenly without squishing them.",
+      "Serve fruit mixture in individual bowls.",
+      "Add a spoonful of yogurt on the side.",
+      "Place mini waffles next to the bowl.",
+      "Drizzle honey over fruit salad or serve it separately in a small dish.",
+      "Enjoy fresh and chilled!"
+    ]
   }
 ]
