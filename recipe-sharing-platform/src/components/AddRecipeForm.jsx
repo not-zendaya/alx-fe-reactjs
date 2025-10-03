@@ -5,7 +5,7 @@ function AddRecipeForm({onAddRecipe}){
     const [title, setTitle] = useState("");
     const [ingredients, setIngredients] = useState("");
     const [steps, setSteps] = useState("");
-    const [error, setError] = useState({});
+    const [errors, setErrors] = useState({});
 
     const validate =() =>{
         const newErrors = {};
@@ -15,7 +15,7 @@ function AddRecipeForm({onAddRecipe}){
          if (ingredientsArr.length < 2) newErrors.ingredients = "At least two ingredients are required.";
          if (!steps.trim()) newErrors.steps = "Preparation steps are required.";
 
-         setError(newErrors);
+         setErrors(newErrors);
          return Object.keys(newErrors).length === 0;
     };
 
@@ -36,11 +36,11 @@ function AddRecipeForm({onAddRecipe}){
         if(onAddRecipe){
             onAddRecipe(newRecipe);
         }
-        
+
     setTitle("");
     setIngredients("");
     setSteps("");
-    setError({});
+    setErrors({});
    };
 
   return (
@@ -53,9 +53,9 @@ function AddRecipeForm({onAddRecipe}){
           Add a New Recipe
         </h2>
 
-        {error.title && (
+        {errors.title && (
           <p className="bg-red-100 text-red-700 p-2 mb-4 rounded-lg text-sm text-center">
-            {error.title}
+            {errors.title}
           </p>
         )}
 
