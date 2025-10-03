@@ -4,7 +4,7 @@ import recipesData from "../data.json";
 
 function HomePage(){
     const[ recipes, setRecipes] = useState([]);
-
+    
     useEffect(() => {
         setRecipes(recipesData);
     }, []);
