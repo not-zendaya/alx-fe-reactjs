@@ -31,6 +31,10 @@ function HomePage(){
                 </div>
             ))}    
         </div>
+        <div className="text-center mt-10"><Link to="/add" className="mt-8 px-6 py-2 bg-emerald-600 text-white rounded-full shadow-md hover:bg-teal-700 transition"> 
+        Add New Recipe +
+        </Link>
+        </div>
     </div>
     )
 }
