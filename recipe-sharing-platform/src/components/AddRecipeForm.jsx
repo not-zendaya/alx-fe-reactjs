@@ -1,41 +1,49 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-function AddRecipeForm(onAddRecipe){
+function AddRecipeForm({onAddRecipe}){
     const [title, setTitle] = useState("");
     const [ingredients, setIngredients] = useState("");
     const [steps, setSteps] = useState("");
-    const [error, setError] = useState("");
+    const [error, setError] = useState({});
+
+    const validate =() =>{
+        const newErrors = {};
+
+         if (!title.trim()) newErrors.title = "Title is required.";
+         const ingredientsArr = ingredients.split(",").map(i => i.trim()).filter(Boolean);
+         if (ingredientsArr.length < 2) newErrors.ingredients = "At least two ingredients are required.";
+         if (!steps.trim()) newErrors.steps = "Preparation steps are required.";
+
+         setError(newErrors);
+         return Object.keys(newErrors).length === 0;
+    };
 
     const handleSubmit = (e) =>{
         e.preventDefault();
+
+        if (!validate()) return;
+
         console.log("Form submitted");
 
-    const titleTrimmed = title.trim();
-    const stepsTrimmed = steps.trim();
-    
-    if (!titleTrimmed || !stepsTrimmed) {
-    setError("Title and preparation steps are required.");
-    return;
-  }
+        const newRecipe = {
+            id: Date.now(),
+            title: title.trim(), 
+            ingredients: ingredients.split(",").map(i => i.trim()).filter(Boolean),
+            instructions: steps.split(".").map(s => s.trim()).filter(Boolean),
+        };
 
-    const ingredientList = ingredients.split(",").map((i) => i.trim());
-    if(ingredientList.length < 2){
-        setError("Pleae add at least two ingredients");
-        return;
-    }
-
-    const NewRecipe ={id: Date.now(), title, ingredients: ingredientList, steps};
-    onAddRecipe(NewRecipe); 
-    console.log("New recipe:", NewRecipe);
-
+        if(onAddRecipe){
+            onAddRecipe(newRecipe);
+        }
+        
     setTitle("");
     setIngredients("");
     setSteps("");
-    setError("");
-   }
+    setError({});
+   };
 
-   return (
+  return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-950 to-teal-500 flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
@@ -45,9 +53,9 @@ function AddRecipeForm(onAddRecipe){
           Add a New Recipe
         </h2>
 
-        {error && (
+        {error.title && (
           <p className="bg-red-100 text-red-700 p-2 mb-4 rounded-lg text-sm text-center">
-            {error}
+            {error.title}
           </p>
         )}
 
@@ -103,7 +111,6 @@ function AddRecipeForm(onAddRecipe){
     </div>
   );
 }
-
 export default AddRecipeForm;
 
 
