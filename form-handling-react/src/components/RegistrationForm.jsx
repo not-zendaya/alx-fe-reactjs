@@ -24,7 +24,7 @@ function ControlledRegistrationForm() {
     const validate = () => {
         const e = {};
         if (!username.trim()) e.username = "Username is required";
-        if (!email.trim()) e.email = "Email is required";
+        if (!email) e.email = "Email is required";
         else if (!/^\S+@\S+\.\S+$/.test(email)) e.email = "Email is invalid";
         if (!password) e.password = "Password is required";
         setErrors(e);
