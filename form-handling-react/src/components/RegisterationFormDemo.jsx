@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { ControlledRegistrationForm } from "./ControlledRegistrationForm";
-import { FormikRegistrationForm } from "./FormikForm";
+import { FormikRegistrationForm } from "./formikForm";
 
 function RegistrationFormsDemo() { 
     
