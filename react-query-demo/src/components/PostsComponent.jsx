@@ -18,6 +18,7 @@ const fetchPosts = async () => {
     } = useQuery('posts', fetchPosts, {
         cacheTime: 1000 * 60 * 5,          // ⏱ Cache data for 5 minutes
         refetchOnWindowFocus: false,       // 🚫 Prevent refetch when tab/window is refocused
+        staleTime: 1000 * 60 * 1,          // 🚫 Don't refetch on window focus
         keepPreviousData: true,            // 🧠 Keep old data while new data is loading
     });
   }
