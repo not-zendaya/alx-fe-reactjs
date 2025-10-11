@@ -10,8 +10,10 @@ const Profile = () => {
         <Link to="settings" className="text-blue-600 underline">Profile Settings</Link>
       </nav>
 
-      {/* Nested routes will render here */}
-      <Outlet />
+       <Routes>
+        <Route path="details" element={<ProfileDetails />} />
+        <Route path="settings" element={<ProfileSettings />} />
+      </Routes>
     </div>
   );
 };
