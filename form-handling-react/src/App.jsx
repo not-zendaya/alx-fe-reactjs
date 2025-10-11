@@ -1,5 +1,6 @@
 import ControlledRegistrationForm from "./components/RegistrationForm"
-import FormikRegistrationForm from "./components/formikForm"
+import FormikRegistrationForm from "./components/formikForm";
+
 
 function App() {
   return <FormikRegistrationForm />
